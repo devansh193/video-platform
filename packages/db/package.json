@@ -1,0 +1,20 @@
+{
+  "name": "@repo/db",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.31.0",
+    "tsx": "^4.19.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "concurrently": "^9.1.2",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1"
+  }
+}
