@@ -15,6 +15,7 @@
   "dependencies": {
     "@clerk/nextjs": "^6.18.0",
     "@repo/ui": "*",
+    "@repo/services": "*",
     "@tanstack/react-query": "^5.74.7",
     "@trpc/client": "^11.1.2",
     "@trpc/server": "^11.1.2",
