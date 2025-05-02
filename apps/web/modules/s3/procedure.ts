@@ -1,6 +1,6 @@
 import { db } from "@repo/db";
 import { videos } from "@repo/db/schema";
-import { s3Driver } from "@repo/service/s3/s3.config";
+import { s3Driver } from "@repo/services/s3/s3.config";
 import { createTRPCRouter, protectedProcedure } from "../../trpc/init";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
@@ -27,7 +27,7 @@ export const s3Router = createTRPCRouter({
         const id = Math.random();
         const s3Key = `${id}${fileName}`;
         const [s3UploadData, video] = await Promise.all([
-          s3Driver.getUrlToUpload({ key: s3Key, mimeType }),
+          s3Driver.getUrlToUpload({ key: s3Key, mimeType }, "raw-video"),
           db
             .insert(videos)
             .values({
