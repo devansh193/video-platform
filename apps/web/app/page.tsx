@@ -1,8 +1,9 @@
-import { COUNT } from "@repo/db";
+import { Button } from "@repo/ui/components/ui/button";
 export default function Home() {
   return (
     <div>
-      <h1>{COUNT}</h1>
+      {/* <Uploader /> */}
+      <Button variant={"default"}>Button</Button>
     </div>
   );
 }

@@ -31,3 +31,5 @@ export const videosRelations = relations(videos, ({ one }) => ({
     references: [users.id],
   }),
 }));
+
+export const COUNT = 800;
